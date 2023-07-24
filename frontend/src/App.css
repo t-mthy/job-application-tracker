@@ -1,0 +1,572 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+/* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+/* npm install modern-normalize
+            Resets elements for browser consistency.  
+            https://www.npmjs.com/package/modern-normalize
+          */
+
+/* Component-specific stylesheets, if any. 
+      @import "component1.css";   
+    */
+
+/*   ----- Variables  -----  */
+:root {
+    --primary-purple: #471778;
+    --dark-purple: #230b3b;
+    --medium-purple: #8129d9;
+    --light-purple: #be7dff;
+    --secondary-magenta: #cc029a;
+    --contrast-cyan: #62ccf0;
+    --deep-red: #cf0000;
+    --deep-green: #007800;
+    --transparent-blue-low: rgb(193, 251, 254, 0.7);
+    --transparent-blue-high: rgb(193, 251, 254, 0.8);
+    --transparent-secondary-magenta: rgb(204, 2, 154, 0.1);
+    --custom-embellishment-name: ;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+    /* Can alternatively define in html {} or :root {} */
+    background-attachment: fixed;
+    background-color: var(--medium-purple);
+    background-image: url(images/background-mesh-gradient.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--dark-purple);
+    font-family: 'Poppins', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    padding: 0;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+    background-color: var(--light-purple);
+    border: none;
+    color: var(--primary-purple);
+    margin: 0 3%;
+    padding: 0.1%;
+    text-align: center;
+}
+main {
+    background-color: var(--transparent-blue-low);
+    border: none;
+    margin: 0 3%;
+    padding: 3%;
+}
+section {
+    background-color: var(--transparent-blue-high);
+    border: none;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 3%;
+}
+article {
+    border-top: 2px solid var(--medium-purple);
+    margin: 2em auto;
+}
+#topic1 {
+}
+#topic2 {
+}
+div {
+}
+aside {
+}
+footer {
+    background-color: var(--light-purple);
+    border: none;
+    color: var(--primary-purple);
+    margin: 0 3%;
+    padding: 0.1%;
+    text-align: center;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+}
+a:link {
+}
+a:hover {
+}
+a:active {
+}
+a:visited {
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 8px;
+}
+nav a {
+    background-color: var(--light-purple);
+    border: 2px solid var(--primary-purple);
+    border-radius: 15px;
+    color: var(--primary-purple);
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: var(--contrast-cyan);
+    border-color: var(--secondary-magenta);
+}
+.mainNav {
+    background-color: var(--light-purple);
+    font-size: larger;
+    margin: 0 3%;
+}
+.mainNav a {
+    border: 3px solid var(--primary-purple);
+    border-radius: 10px;
+    margin: 0 1.1em;
+    transition: all 0.1s;
+}
+.mainNav a:hover {
+    background-color: var(--secondary-magenta);
+    border-color: var(--primary-purple);
+    box-shadow: 0 0.5em 0.3em -0.2em var(--contrast-cyan);
+    transform: translateY(-0.2em);
+}
+.add-btn {
+    align-items: center;
+    background-color: var(--light-purple);
+    border: 2px solid var(--primary-purple);
+    border-radius: 4px;
+    color: var(--primary-purple);
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+*/
+
+.add-btn:hover {
+    background-color: var(--contrast-cyan);
+    border-color: var(--secondary-magenta);
+}
+
+/*  -----  Typography  ----- */
+p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rubik', sans-serif;
+}
+h1 {
+    margin: 0.5em 1em;
+    padding: 0;
+}
+h2 {
+    margin: 0 0 0.75em 0;
+    padding: 0;
+}
+h3 {
+    margin: 1em 0;
+    padding: 0;
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+strong {
+}
+sub {
+}
+sup {
+}
+time {
+}
+
+/*  ----- Coding or instructional typography ----- */
+pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}
+
+/*  ----- Table ----- */
+table {
+    border-collapse: collapse;
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+caption {
+    color: var(--primary-purple);
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+thead {
+    background-color: var(--light-purple);
+}
+tbody {
+}
+tfoot {
+}
+tr {
+}
+tr:nth-child(even) {
+    background-color: var(--transparent-secondary-magenta);
+}
+tr:hover {
+    background-color: var(--contrast-cyan);
+}
+th {
+    border: 1px solid var(--light-purple);
+    padding: 10px;
+}
+td {
+    border: 1px solid var(--light-purple);
+    padding: 12px;
+}
+td label {
+    display: inline;
+    margin: auto;
+}
+.dataPrice {
+    text-align: right;
+}
+.dataChoose {
+    text-align: center;
+}
+td:nth-child(1) {
+}
+colgroup {
+}
+data {
+}
+datalist {
+}
+
+/*  ----- Form ----- */
+form,
+button,
+input,
+select,
+textarea {
+    color: var(--dark-purple);
+    font-family: inherit;
+    font-size: 97%;
+    padding: 0.7em;
+}
+fieldset {
+    border: 2px solid var(--medium-purple);
+    margin: 2% 1%;
+    padding: 0.9em;
+}
+legend {
+    color: var(--medium-purple);
+    font-size: large;
+    font-weight: bold;
+}
+label {
+    display: block;
+    margin-top: 1.1em;
+}
+p.formLabel {
+    margin: 1.7em 0 0;
+}
+label.required:after {
+    content: ' *';
+    color: var(--deep-red);
+}
+:required {
+    border: 2px solid var(--deep-green);
+}
+button {
+    background-color: var(--light-purple);
+    border: 2px solid var(--medium-purple);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    line-height: 36px;
+    padding: 0 1.3em;
+    margin: 2em auto 1em;
+}
+button:hover {
+    background-color: var(--contrast-cyan);
+    border-color: var(--secondary-magenta);
+}
+.btnSubmit {
+    display: block;
+}
+input {
+    background-color: var(--transparent-blue-high);
+    border: 2px solid var(--medium-purple);
+}
+/* input[type='text'],
+input[type='email'] {
+    width: 100%;
+} */
+.log-comp {
+    width: 5em;
+}
+.log-posn {
+    width: 7em;
+}
+.log-rtng {
+    width: 45%;
+}
+.log-date {
+    width: 50%;
+}
+output {
+}
+meter {
+}
+progress {
+}
+select {
+    background-color: var(--transparent-blue-high);
+    border: 2px solid var(--medium-purple);
+    padding: 0.8em;
+}
+optgroup {
+}
+option {
+}
+textarea {
+    background-color: var(--transparent-blue-high);
+    border: 2px solid var(--medium-purple);
+    height: 70px;
+    width: 50%;
+}
+.txtDlvryInstr {
+    height: 50px;
+    width: 35%;
+}
+:focus {
+    background-color: var(--transparent-secondary-magenta);
+    border: 2px solid var(--secondary-magenta);
+    outline: none;
+}
+::placeholder {
+    color: var(--light-purple);
+}
+
+/* ----- Media ----- */
+figure {
+    border: 2px solid var(--medium-purple);
+    box-shadow: 2px 2px 2px 1px var(--medium-purple);
+    margin: 3%;
+    width: 400px;
+}
+figcaption {
+    color: var(--primary-purple);
+    font-weight: bold;
+    padding: 0.5em;
+}
+figure img {
+    color: var(--medium-purple);
+    width: 100%;
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.floatright {
+}
+.floatleft {
+}
+.center-middle {
+}
+
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}
+
+@keyframes App-logo {
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
+
+/* REACT styles */
+/* .App {
+    text-align: center;
+} */
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+/* .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+} */
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
